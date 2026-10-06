@@ -4,69 +4,267 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog</title>
-  <style>
+  <style> 
+      :root {
+          --cor-fundo: #ffffff;
+          --cor-texto: #000000;
+          --cor-header: #835BC2;
+          --cor-main: #7B8FD1;
+          --cor-borda: #0C0C0C;
+          --cor-botao: #ffffff;
+        }
+
+        body.escuro {
+        --cor-fundo: #121212;
+        --cor-texto: #ffffff;
+        --cor-header: #1f2937;
+        --cor-main: #374151;
+        --cor-borda: #ffffff;
+        --cor-botao: #222222;
+        }
+
+        body {
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto);
+        margin: 0;
+        font-family: Arial, sans-serif;  
+            
+        transition: background-color 0.3s, color 0.3s;
+        }
+
   header {
-      background-color: #FFFACD;
-      color: #000000;
+      background-color: var(--cor-header);
+      color: var(--cor-texto);
       text-align: center;
+      max-width: 800px;
+      margin: 20px auto;
+      padding:16px;
+      border: 5px solid var(--cor-borda);
+      border-radius: 8px;
+  } 
+      
+  main {
+      background-color: var(--cor-main);
+      color: var(--cor-texto);
       max-width: 800px;
       margin: 0 auto;
       padding:16px;
-      border: 5px solid #0C0C0C;
+      border-radius: 8px;
   }
-  main {
-      background-color:#FFFACD;
-      color: #000000;
-      max-width: 800px;
-      margin: 0 auto;
-      padding:16px;  
+      
+      article{
+      display: flex;
+      align-items: center;
+      gap: 25px;
+          
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+          
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
   }
-  img{
-  width: 300px;
-  height: auto;
-  }
-</style>
-       
-  </head>
-  <body>
-     
-    <header>
-      <h1> Os 10 melhores filmes</h1>
-      <p> Aqui você vai ver os 10 melhores filmes </p>  
-    </header>
-     <main>
-    <img src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdram9rampkemg2MmJxbnByZ3VtZGdzNDQ2dDR1NDB4ODdudXA5NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xs8Xv5TywQWBkA/giphy.gif'
-    alt= "O cinema é um espelho que não apenas reflete quem somos, mas que projeta, nas sombras da sala escura, a luz das vidas que ainda podemos viver.">
-    <div>
-    <h2>Meu primeiro post</h2>  
-    <p>Por: Giovanna Roeder Cesar</p>
-    <p>Boas-vindas! Aqui você encontra os 10 melhores filmes de romance e comédia! </p>  
-        <button>❤️​ <span>0</span></button>
-        <button>​👎​​ <span>0</span></button>
-    </div>
-         
-    </main>  
-  </body>
-    <script>
-    const botao = document.querySelector("button");
-    botao.addEventListener("click",botaoClicado);
 
-    function botaoClicado(){
-        
-    }
-        
-<script>
-  </html>
-  const botton = document.querySelector("button");
-  botao.addEventListener("click",botaoClicaddo);
-
-  function botaoClicado() {
-  conseole.log("fui clicado");
-  let texto = botao.querySelector("span");
-  texto.textContent++;
+ article img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-color: #ffffff;
+    border-radius: 8px;
+    flex-shrink: 0;
 }
-   </script>
-</html>
+.conteudo {
+            flex: 1;
+        }
 
- 
- 
+        .botoes {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        article button {
+            padding: 8px 12px;
+            border: 1px solid var(--cor-borda);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            background-color: #D8D7FC;
+            color: #000000;
+        }
+
+        article button:hover {
+            opacity: 0.8;
+        }
+
+        #botaoTema {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            padding: 12px 16px;
+            border: 1px solid var(--cor-borda);
+            border-radius: 8px;
+
+            cursor: pointer;
+            font-size: 16px;
+
+            background-color: var(--cor-botao);
+            color: var(--cor-texto);
+
+            z-index: 1000;
+        }
+
+        #botaoTema:hover {
+            opacity: 0.8;
+        }
+      
+</style>
+ </head>
+    
+  <body>
+      
+    <header>
+      <h1> </h1>
+      <p>  </p>   
+    </header>
+      
+    <main> 
+
+    <article>
+        <img src=
+    alt=>
+        <div class> 
+    <h2></h2>   
+    <p></p>
+    <p></p>
+    <div class="botoes">
+    <button class="botao-curtida">❤️<span>0</span></button> 
+    <button class="botao-curtida">👍<span>0</span></button> 
+    <button class="botao-curtida">👎<span>0</span></button> 
+        </div>
+            </div>
+    </article>
+
+     <article>
+    <img src="
+    alt=">
+        <div class="conteudo">       
+    <h2></h2>   
+    <p></p>
+    <p>Fonte://revistaoeste.com/variedades.com</p>
+    <a href=>Clique aqui para visitar o site</a>
+    <div class="botoes">       
+    <button class="botao-curtida">❤️<span>0</span></button> 
+    <button class="botao-curtida">👍<span>0</span></button> 
+    <button class="botao-curtida">👎<span>0</span></button> 
+        </div> 
+             </div> 
+    </article>
+
+        <article>
+        <img src=
+    alt=">
+        <div class="conteudo">       
+    <h2></h2>   
+    <p></p>
+    <p></p>
+    <a href=>Clique aqui para visitar o site</a>
+    <div class="botoes">       
+    <button class="botao-curtida">❤️<span>0</span></button> 
+    <button class="botao-curtida">👍<span>0</span></button> 
+    <button class="botao-curtida">👎<span>0</span></button> 
+        </div> 
+             </div> 
+    </article>
+
+         <article>
+        <img src= 
+    alt=>
+        <div class="conteudo">       
+    <h2> </h2>   
+    <p></p>
+    <p></p>   
+    <a href=</a>
+    <div class="botoes">       
+    <button class="botao-curtida">❤️<span>0</span></button> 
+    <button class="botao-curtida">👍<span>0</span></button> 
+    <button class="botao-curtida">👎<span>0</span></button> 
+        </div> 
+             </div> 
+    </article>
+
+         <article>
+        <img src=
+    alt=>
+        <div class="conteudo">       
+    <h2> </h2>   
+    <p></p>
+    <p></p>
+    <a href=</a>
+    <div class="botoes">       
+    <button class="botao-curtida">❤️<span>0</span></button> 
+    <button class="botao-curtida">👍<span>0</span></button>
+    <button class="botao-curtida">👎<span>0</span></button> 
+        </div> 
+             </div> 
+    </article>
+
+         <article>
+        <img src= 
+    alt=>
+        <div class="conteudo">       
+    <h2></h2>   
+    <p></p>
+    <p>Fonte: </p>
+    <a href=>Clique aqui para visitar o site</a>
+    <div class="botoes">       
+    <button class="botao-curtida">❤️<span>0</span></button> 
+    <button class="botao-curtida">👍<span>0</span></button> 
+    <button class="botao-curtida">👎<span>0</span></button> 
+        </div> 
+             </div>
+             
+    </article>
+        
+    </main>   
+  <button id="botaoTema">
+        🌙
+    </button>
+      
+  <script>
+      const botaoTema = document.getElementById("botaoTema");
+
+        botaoTema.addEventListener("click", function () {
+
+            document.body.classList.toggle("escuro");
+
+            if (document.body.classList.contains("escuro")) {
+                botaoTema.textContent = "☀️";
+            } else {
+                botaoTema.textContent = "🌙";
+            }
+
+        });
+      
+      const botoes = document.querySelectorAll(".botao-curtida");
+
+      botoes.forEach( function(botao){
+         let curtiu = false; 
+         botao.addEventListener("click", botaoClicado);
+         function botaoClicado(){
+           console.log("fui clicado");
+           let texto = botao.querySelector("span");
+           if (curtiu === false){ 
+           texto.textContent++;
+           curtiu = true;
+      } else{
+          texto.textContent--; 
+          curtiu = false;     
+         }         
+      } 
+   })
+          
+    </script> 
+  </body>
+</html>
